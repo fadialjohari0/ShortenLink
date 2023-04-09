@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 import Icon1 from "../../images/icon-brand-recognition.svg";
@@ -22,7 +22,7 @@ const ContainerItem = ({ title, content, icon }) => (
       sx={{
         position: "absolute",
         top: "-30px",
-        left: { xs: "40%", sm: "10%" },
+        left: { xs: "41%", sm: "10%" },
       }}
     >
       <Box
@@ -119,11 +119,11 @@ const Statistics = () => {
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
-          gap: { xs: "5rem", md: "4rem" },
+          gap: { xs: "0", md: "1rem" },
           padding: "3rem 5rem",
         }}
       >
-        <Box>
+        <Box sx={{ zIndex: 1 }}>
           <ContainerItem
             icon={Icon1}
             title="Brand Recognition"
@@ -131,7 +131,30 @@ const Statistics = () => {
           />
         </Box>
         <Box
-          sx={{ transform: { md: "translateY(0)", lg: "translateY(42px)" } }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Divider
+            sx={{
+              width: "6px",
+              height: { xs: "62px" },
+              backgroundColor: "#27cfd0",
+              rotate: { xs: "0deg", sm: "90deg" },
+            }}
+          />
+        </Box>
+
+        <Box
+          sx={{
+            transform: {
+              md: "translateY(0)",
+              lg: "translateY(32px)",
+              zIndex: 1,
+            },
+          }}
         >
           <ContainerItem
             icon={Icon2}
@@ -139,7 +162,23 @@ const Statistics = () => {
             content="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
           />
         </Box>
-        <Box sx={{ transform: { lg: "translateY(84px)" } }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Divider
+            sx={{
+              width: "6px",
+              height: { xs: "62px" },
+              backgroundColor: "#27cfd0",
+              rotate: { xs: "0deg", sm: "90deg" },
+            }}
+          />
+        </Box>
+        <Box sx={{ transform: { lg: "translateY(64px)", zIndex: 1 } }}>
           <ContainerItem
             icon={Icon3}
             title="Fully Customizable"

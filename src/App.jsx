@@ -21,6 +21,7 @@ function App() {
         }}
       >
         <ShortenLink />
+
         <Statistics />
       </div>
       <BoostLink />
